@@ -16,8 +16,10 @@ a:hover,a:focus{color:#232323;text-decoration:none}
 .ps-container.ie6 .ps-scrollbar-y{font-size:0}.ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y,.ps-container .ps-scrollbar-y-rail.hover .ps-scrollbar-y{background-color:#fafafa}
 .ps-container.ie .ps-scrollbar-x,.ps-container.ie .ps-scrollbar-y{visibility:hidden}
 .ps-container.ie:hover .ps-scrollbar-x,.ps-container.ie:hover .ps-scrollbar-y,.ps-container.ie.hover .ps-scrollbar-x,.ps-container.ie.hover .ps-scrollbar-y{visibility:visible}
-.xe-comment-entry img{float:left;display:block;background:rgba(136,136,136,.15);margin-right:10px}
-.xe-comment p{margin-bottom:0px}
+.xe-comment-entry img{float:left;display:block;margin-right:10px}
+.xe-comment {transform: translateY(-50%);position: absolute;margin-left: 50px;top: 50%;}
+.xe-comment p{margin-bottom:0px;margin-right:15px}
+.img-circle {padding: 7px 0;}
 .overflowClip_1{overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;word-break:break-all;display:-webkit-box!important;-webkit-line-clamp:1;-webkit-box-orient:vertical}
 .overflowClip_2{overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;word-break:break-all;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .overflowClip_1{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block!important}
@@ -168,7 +170,7 @@ footer.main-footer .footer-text{float:left}
 nav.navbar{position:fixed;z-index:2000!important;width:calc(100% - 250px);padding:0;background-color:transparent}
 .sidebar-menu.collapsed+.main-content>nav.navbar{width:calc(100% - 80px)}
 .xe-widget.xe-conversations:hover,.xe-widget.xe-conversations:focus{background:#fff!important;text-decoration:none}
-.xe-card.wechat a:after{content:'\f029';position:absolute;display:inline-block;font-family:FontAwesome;font-size:18px;color:#6d747a;margin-left:10px;bottom:0;right:5px}
+.xe-card.qrcode a:after{content:'\f029';position:absolute;display:inline-block;font-family:FontAwesome;font-size:18px;color:#6d747a;margin-left:10px;bottom:0;right:5px}
 .mx-auto{margin-left:auto;margin-right:auto;float:none}
 .main-content .panel img{max-width:100%;height:auto}
 footer.main-footer{border-top:0;background-color:#fff}

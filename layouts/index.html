@@ -125,7 +125,7 @@
             <div class="row">
             {{ range .links }}
                 {{ if .qrcode }}
-                <div class="xe-card col-xs-6 col-sm-4 col-md-3 qrcode">
+                <div class="xe-card col-xs-6 col-sm-4 col-md-3 qrcode geticon">
                     <a href="{{ .url }}" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<img src='{{ .qrcode }}' width='128'>">
                         <div class="xe-comment-entry">
                             <div class="xe-user-img">
@@ -141,7 +141,7 @@
                     </a>
                 </div>
                 {{ else }}
-                <div class="xe-card col-xs-6 col-sm-4 col-md-3">
+                <div class="xe-card col-xs-6 col-sm-4 col-md-3 geticon">
                     <a href="{{ .url }}" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom"  title="{{ .url }}">
                         <div class="xe-comment-entry">
                             <div class="xe-user-img">
@@ -168,7 +168,7 @@
             <div class="row">
             {{ range .links }}
                 {{ if .qrcode }}
-                <div class="xe-card col-xs-6 col-sm-4 col-md-3 qrcode">
+                <div class="xe-card col-xs-6 col-sm-4 col-md-3 qrcode geticon">
                     <a href="{{ .url }}" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom" data-html="true" title="<img src='{{ .qrcode }}' width='128'>">
                         <div class="xe-comment-entry">
                             <div class="xe-user-img">
@@ -184,7 +184,7 @@
                     </a>
                 </div>
                 {{ else }}
-                <div class="xe-card col-xs-6 col-sm-4 col-md-3">
+                <div class="xe-card col-xs-6 col-sm-4 col-md-3 geticon">
                     <a href="{{ .url }}" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom"  title="{{ .url }}">
                         <div class="xe-comment-entry">
                             <div class="xe-user-img">
@@ -236,6 +236,13 @@
     </div>
 <script type="text/javascript">
     $(document).ready(function() {
+        <!-- 利用iowen API 获取网址icon START --> 
+        $(".geticon").each(function(){
+            var url = $(this).find('a').attr('href');
+            var apiUrl="https://api.iowen.cn/favicon/"+url.replace(/^https?:\/\//, '').replace(/\/.*$/, '')+".png"
+            $(this).find('img').attr('src', apiUrl);
+        })
+        <!-- END 利用iowen API 获取网址icon START-->
         $(document).on('click', '.has-sub', function(){
             var _this = $(this)
             if(!$(this).hasClass('expanded')) {

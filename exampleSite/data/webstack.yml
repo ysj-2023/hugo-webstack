@@ -12,10 +12,10 @@
       url: https://behance.net/
       description: Adobe旗下的设计师交流平台，来自世界各地的设计师在这里分享自己的作品。
     - title: 二维码演示
-      qrcode: assets/images/webstack-hugo-qrcode.png
+      qrcode: assets/images/cli.png
       logo: assets/images/favicon.png
-      url: https://github.com/oulh/hugo-webstack/blob/master/layouts/index.html#L117-L123
-      description: 二维码演示，新增二维码，手机扫一扫
+      url: https://cli.im/url
+      description: 二维码演示，手机扫一扫，也可以点击
     - title: UI中国
       logo: assets/images/logos/uicn.png
       url: https://www.ui.cn/

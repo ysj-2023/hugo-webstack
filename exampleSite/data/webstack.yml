@@ -14,6 +14,7 @@
     - title: 二维码演示
       qrcode: assets/images/webstack-hugo-qrcode.png
       logo: assets/images/favicon.png
+      url: https://github.com/oulh/hugo-webstack/blob/master/layouts/index.html#L117-L123
       description: 二维码演示，新增二维码，手机扫一扫
     - title: UI中国
       logo: assets/images/logos/uicn.png

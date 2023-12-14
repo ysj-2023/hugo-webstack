@@ -963,7 +963,6 @@
           description: 用户体验人的专业社区
 
 
-
 - taxonomy: UED团队
   icon: fa-user
   links: 
@@ -1031,3 +1030,35 @@
       url: http://ued.ctrip.com/
       logo: assets/images/logos/ctrip.png
       description: 携程设计委员会-Ctrip Design Committee
+     
+
+
+
+     
+- taxonomy: 友情链接
+  icon: fa-link
+  friend:
+    - title: webstack.cc
+      url: https://webstack.cc
+      description: webstack - 设计师网址导航
+    - title: 一为导航
+      url: https://nav.iowen.cn/
+      description: onenav主题演示站
+    - title: 一为 webstack 演示站
+      url: https://webstack.iotheme.cn/
+    - title: iplaycode 演示站
+      url: https://iplaycode.github.io/nav/
+      description: iplaycode的demo导航网站
+    - title: bioit导航
+      url: https://www.bioit.top/
+      description:
+    - title: 所长导航
+      url: https://liutongxu.github.io/
+      description:
+    - title: 404导航
+      url: https://www.404dh.icu/
+      description: 只导航优质资源
+    - title: 飞猪ai导航
+      url: https://feizhuke.com/
+      description: AI工具集箱
+  

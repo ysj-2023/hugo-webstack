@@ -1,0 +1,20 @@
+baseURL = "http://example.org/"
+languageCode = "zh-CN"
+title = "一二导航"
+theme = "hugo-webstack"
+preserveTaxonomyNames = true
+disablePathToLower = true
+hasCJKLanguage = true
+copyright = "oulh"
+[params]
+  author = "iplaycode"
+  description = "Webstack Hugo"
+[params.search]
+  enable = true
+[params.darkmode]
+  enable = false
+# 菜单栏显示在线编辑按钮（编辑github上的webstack.yml，适用于自动化部署的情况）
+[params.edit]
+  enable = true
+  # 替换为自己的链接
+  url = "//github.com/oulh/hugo-webstack/blob/master/exampleSite/data/webstack.yml"

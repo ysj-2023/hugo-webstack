@@ -204,6 +204,19 @@
         <br />
         <!--END {{ .taxonomy }} -->
     {{ end }}
+    <!-- 友情链接 -->
+    {{ if .friend }}
+    <div class="friendlink" style="margin-bottom:-40px">
+        <div class="panel">
+        {{ range .friend }}            
+            <!-- <h4 class="text-gray mb-4"> -->
+            <!-- <i class="fa fa-bookmark" id="friendlink" style="margin-right:10px"></i>友情链接</h4> -->                
+            <a href="{{ .url }}" rel="noopener" title="{{ .description }}" target="_blank">{{ .title }}</a>
+        {{ end }}
+        </div> 
+    </div>
+    {{ end }}
+    <!-- END 友情链接    -->
 {{ end }}
 </div>
             <footer class="main-footer sticky footer-type-1">

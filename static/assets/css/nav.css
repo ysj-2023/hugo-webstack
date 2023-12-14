@@ -20,10 +20,12 @@ a:hover,a:focus{color:#232323;text-decoration:none}
 .xe-comment {transform: translateY(-50%);position: absolute;margin-left: 50px;top: 50%;}
 .xe-comment p{margin-bottom:0px;margin-right:15px}
 .img-circle {padding: 7px 0;}
-.overflowClip_1{overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;word-break:break-all;display:-webkit-box!important;-webkit-line-clamp:1;-webkit-box-orient:vertical}
+/* .overflowClip_1{overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;word-break:break-all;display:-webkit-box!important;-webkit-line-clamp:1;-webkit-box-orient:vertical}
 .overflowClip_2{overflow:hidden;-o-text-overflow:ellipsis;text-overflow:ellipsis;word-break:break-all;display:-webkit-box!important;-webkit-line-clamp:2;-webkit-box-orient:vertical}
 .overflowClip_1{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block!important}
-.submit-tag{margin-top:50px}
+.submit-tag{margin-top:50px} */
+.overflowClip_2{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical}
+.overflowClip_1{overflow:hidden;text-overflow:ellipsis;display:-webkit-box;-webkit-line-clamp:1;-webkit-box-orient:vertical}
 .xe-card{position:relative;height:86px;margin:20px 0 0 0}
 .xe-widget{position:relative}
 .xe-widget.xe-conversations{position:absolute;background:#fff;margin-bottom:0px;padding:15px;left:0;right:0;margin:0 15px}
@@ -291,7 +293,11 @@ input[type="button"],input[type="submit"]{background-color:#222;border:0;-webkit
 .search-type{overflow:scroll}
 .search-list{height:30px;overflow-y:hidden;overflow-x:scroll;white-space:nowrap}
 }
-
+/* --- 手机移动端 显示更密集一点 --- */
+@media screen and (max-width:767px){.xe-card{position:relative;height:80px;margin:10px 0 0 0;font-size:12px;}.box2{height:80px}.img-circle{padding:3px 0;}.xe-widget.xe-conversations{margin:0 5px}}
+/* --- 高分辨率或浏览器缩放时显示更多列 --- */
+@media screen and (min-width:1600px){.col-md-3{width:20%}}
+@media screen and (min-width:2100px){.col-md-3{width:16.666%}}
 /* --- black --- */
 .black{background-color:#26282a}
 .black,.black a:not(.btn),.black .button>a{color:#ddd}

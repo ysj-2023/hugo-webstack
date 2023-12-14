@@ -118,9 +118,10 @@
 <div class="sites-list" style="margin-bottom: 8.5rem;">
 {{ range .Site.Data.webstack }}
     {{ if .list }}
+        {{ $subicon := .icon }}
         {{ range .list }}
         <!-- {{ .term }} -->
-        <h4 class="text-gray" style="display: inline-block;"><i class="icon-io-tag" style="margin-right: 27px;" id="{{ md5 .term }}"></i>{{ .term }}</h4>
+        <h4 class="text-gray" style="display: inline-block;"><i class="fa {{ $subicon }}" style="margin-right: 27px;" id="{{ md5 .term }}"></i>{{ .term }}</h4>
             <div class="row">
             {{ range .links }}
                 {{ if .qrcode }}
@@ -163,7 +164,7 @@
         {{ end }}
     {{ else }}
         <!-- {{ .taxonomy }} -->
-        <h4 class="text-gray" style="display: inline-block;"><i class="icon-io-tag" style="margin-right: 27px;" id="{{ md5 .taxonomy }}"></i>{{ .taxonomy }}</h4>
+        <h4 class="text-gray" style="display: inline-block;"><i class="fa {{ .icon }}" style="margin-right: 27px;" id="{{ md5 .taxonomy }}"></i>{{ .taxonomy }}</h4>
             <div class="row">
             {{ range .links }}
                 {{ if .qrcode }}

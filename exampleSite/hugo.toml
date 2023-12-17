@@ -17,4 +17,4 @@ copyright = "oulh"
 [params.edit]
   enable = true
   # 替换为自己的链接
-  url = "//github.com/oulh/hugo-webstack/blob/master/exampleSite/data/webstack.yml"
+  url = "https://github.com/oulh/hugo-webstack/blob/master/exampleSite/data/webstack.yml"

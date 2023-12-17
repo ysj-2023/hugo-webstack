@@ -703,10 +703,10 @@ data:
   icon: fa-link
   friend:
     - title: 子页面一
-      url: /sub1
+      url: sub1
       description: 本站子页面1
     - title: 子页面二
-      url: /sub2
+      url: sub2
       description: 本站子页面2
     - title: webstack.cc
       url: https://webstack.cc

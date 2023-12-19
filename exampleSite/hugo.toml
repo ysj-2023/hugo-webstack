@@ -2,19 +2,34 @@ baseURL = "http://example.org/"
 languageCode = "zh-CN"
 title = "一二导航"
 theme = "hugo-webstack"
-preserveTaxonomyNames = true
+
+#true:允许大写字母url路径，false:将url路径转换成小写
 disablePathToLower = true
-hasCJKLanguage = true
+
+#页脚：作者名字
 copyright = "oulh"
+
+#网站信息，不显示，仅供搜索引擎参考
 [params]
-  author = "iplaycode"
-  description = "Webstack Hugo"
+  keywords = "网页导航,webstack,hugo"
+  description = "Webstack Hugo版主题"
+
+#是否开启搜索栏，true开启，false关闭
 [params.search]
   enable = true
+
+#是否开启暗色模式，true暗色模式，false亮色模式
 [params.darkmode]
   enable = false
-# 菜单栏显示在线编辑按钮（编辑github上的webstack.yml，适用于自动化部署的情况）
+
+#主页菜单栏显示在线编辑按钮（编辑github文件，适用于自动化部署的情况）
 [params.edit]
+  # true显示按钮，false不显示
   enable = true
-  # 替换为自己的链接
-  url = "https://github.com/oulh/hugo-webstack/blob/master/exampleSite/data/webstack.yml"
+  # 站点对应的github仓库链接
+  url = "https://github.com/oulh/nav/blob/main/data/webstack.yml"
+  
+#桌面端右上角github按钮
+[params.github]
+  enable = true
+  url = "https://github.com/oulh/nav"

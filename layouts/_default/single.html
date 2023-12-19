@@ -3,10 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<title>{{ .Site.Title }}</title>
+<title>{{ .Site.Title }} - {{ .Params.title }}</title>
 <meta name="theme-color" content="#2C2E2F" />
-<meta name="keywords" content="Webstack Hugo theme">
-<meta name="description" content="Webstack Hugo theme">
+<meta name="keywords" content="{{ .Site.Params.keywords }}">
+<meta name="description" content="{{ .Site.Params.Description }}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="">
 <meta property="og:title" content="">

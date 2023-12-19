@@ -5,8 +5,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 <title>{{ .Site.Title }}</title>
 <meta name="theme-color" content="#2C2E2F" />
-<meta name="keywords" content="Webstack Hugo theme">
-<meta name="description" content="Webstack Hugo theme">
+<meta name="keywords" content="{{ .Site.Params.keywords }}">
+<meta name="description" content="{{ .Site.Params.Description }}">
 <meta property="og:type" content="article">
 <meta property="og:url" content="">
 <meta property="og:title" content="">
@@ -107,11 +107,13 @@
             </li> 
             <!-- 天气 end -->
       </ul>
+        {{ if .Site.Params.Github.enable }}
         <ul class="user-info-menu right-links list-inline list-unstyled">
             <li class="hidden-sm hidden-xs">
-                <a href="https://github.com/oulh/hugo-webstack" target="_blank"><i class="fa fa-github"></i> GitHub</a>
+                <a href="{{ .Site.Params.Github.url }}" target="_blank"><i class="fa fa-github"></i> GitHub</a>
             </li>
         </ul>
+        {{ end }}
     </div>
 </nav>
 {{ template "search.html" . }}

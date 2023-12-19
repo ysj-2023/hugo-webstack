@@ -1,9 +1,12 @@
 ---
-type: nav #固定值nav
-title: 子页面二 #不写则使用站点标题
-edit: #github在线编辑
-  enable: true
-  url: https://github.com/oulh/hugo-webstack/tree/master/exampleSite/content 
+type: nav
+title: 
+search: 
+  enable: false
+edit:
+  enable: false
+  url: https://github.com/oulh/nav/blob/main/content/sub2.md
+
 data:
 
 - taxonomy: 常用推荐

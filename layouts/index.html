@@ -145,7 +145,7 @@
                 {{ else }}
                 <div class="xe-card col-xs-6 col-sm-4 col-md-3 geticon">
                     <a href="{{ .url }}" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom" 
-                    title="{{ if .description }}{{ .description }}{{ else }}{{ .url }}{{ end }}">
+                    title="{{ .description }} {{ .url }}">
                         <div class="xe-comment-entry">
                             <div class="xe-user-img">
                                 <img class="img-circle lazy" src="./images/favicon.png" data-src="{{ .logo }}" onerror="javascript:this.src='./images/favicon.png'" width="40">
@@ -189,7 +189,7 @@
                 {{ else }}
                 <div class="xe-card col-xs-6 col-sm-4 col-md-3 geticon">
                     <a href="{{ .url }}" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom" 
-                    title="{{ if .description }}{{ .description }}{{ else }}{{ .url }}{{ end }}">
+                    title="{{ .description }} {{ .url }}">
                         <div class="xe-comment-entry">
                             <div class="xe-user-img">
                                 <img class="img-circle lazy" src="./images/favicon.png" data-src="{{ .logo }}" onerror="javascript:this.src='./images/favicon.png'" width="40">

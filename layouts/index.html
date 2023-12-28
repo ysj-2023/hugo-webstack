@@ -271,7 +271,6 @@
             var col_width = $('.col-md-3').width();
             var row_width = $('.row').width();
             var percentage = ((col_width + 30) / row_width).toFixed(2);
-            console.log(percentage);
             if($('.sidebar-menu').hasClass('collapsed')) {
                 $('.has-sub.expanded > ul').attr("style","")
                 <!-- 缩小菜单栏 卡片列数+1 -->
@@ -281,6 +280,9 @@
                         break;
                     case '0.20': 
                         $(".col-md-3").css("width", "16.666%");
+                        break;
+                    case '0.33': 
+                        $(".col-md-3").css("width", "25%");
                         break;
                 }
                 <!-- 缩小菜单栏 卡片列数+1 END-->
@@ -293,6 +295,9 @@
                         break;
                     case '0.17': 
                         $(".col-md-3").css("width", "20%");
+                        break;
+                    case '0.25': 
+                        $(".col-md-3").css("width", "33.333%");
                         break;
                 }
                 <!-- 展开菜单栏 卡片列数-1 END-->

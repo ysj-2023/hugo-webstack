@@ -148,7 +148,7 @@
                 </div>
                 {{ else }}
                 <div class="xe-card col-xs-6 col-sm-4 col-md-3 geticon">
-                    <a href="{{ .url }}" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom"  title="{{ .url }}">
+                    <a href="{{ .url }}" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom" title="{{ .description }} {{ .url }}">
                         <div class="xe-comment-entry">
                             <div class="xe-user-img">
                                 <img class="img-circle lazy" src="../images/favicon.png" data-src="{{ .logo }}" onerror="javascript:this.src='../images/favicon.png'" width="40">
@@ -191,7 +191,7 @@
                 </div>
                 {{ else }}
                 <div class="xe-card col-xs-6 col-sm-4 col-md-3 geticon">
-                    <a href="{{ .url }}" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom"  title="{{ .url }}">
+                    <a href="{{ .url }}" target="_blank" class="xe-widget xe-conversations box2 label-info" data-toggle="tooltip" data-placement="bottom"  title="{{ .description }} {{ .url }}">
                         <div class="xe-comment-entry">
                             <div class="xe-user-img">
                                 <img class="img-circle lazy" src="../images/favicon.png" data-src="{{ .logo }}" onerror="javascript:this.src='../images/favicon.png'" width="40">
@@ -270,10 +270,39 @@
             }
         })
         $('.user-info-menu .hidden-xs').click(function(){
+            var col_width = $('.col-md-3').width();
+            var row_width = $('.row').width();
+            var percentage = ((col_width + 30) / row_width).toFixed(2);
             if($('.sidebar-menu').hasClass('collapsed')) {
                 $('.has-sub.expanded > ul').attr("style","")
+                <!-- 缩小菜单栏 卡片列数+1 -->
+                 switch (percentage){
+                    case '0.25': 
+                        $(".col-md-3").css("width", "20%");
+                        break;
+                    case '0.20': 
+                        $(".col-md-3").css("width", "16.666%");
+                        break;
+                    case '0.33': 
+                        $(".col-md-3").css("width", "25%");
+                        break;
+                }
+                <!-- 缩小菜单栏 卡片列数+1 END-->                
             } else {
                 $('.has-sub.expanded > ul').show()
+                <!-- 展开菜单栏 卡片列数-1 -->
+                switch (percentage){
+                    case '0.20': 
+                        $(".col-md-3").css("width", "25%");
+                        break;
+                    case '0.17': 
+                        $(".col-md-3").css("width", "20%");
+                        break;
+                    case '0.25': 
+                        $(".col-md-3").css("width", "33.333%");
+                        break;
+                }
+                <!-- 展开菜单栏 卡片列数-1 END-->
             }
         })
         $("#main-menu li ul li").click(function() {

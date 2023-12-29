@@ -8,12 +8,16 @@
 
 1. 增加：api自动获取网站logo图片
 2. 增加：支持添加多个导航(子)页面
-3. 增加：手机端显示双列，高分辨率大屏或网页缩放时显示5~6列
+3. 增加：卡片显示列数变化
+   - 手机端显示双列
+   - 高分辨率大屏或网页缩放时显示5~6列
+   - 分类菜单收回或展开时，显示列数+1或-1
 4. 内容增加
    - 友情链接区域
    - 页面顶部天气
    - 在线编辑按钮(适用于 github + 自动化部署；可隐藏)
 5. 修改个别样式，增加一些可自定义配置项
+6. 分类标题前的图标库升级到 [FontAwesome-v6-free](https://origin.fontawesome.com/search)
 
 ## 使用方式
 
@@ -26,15 +30,15 @@
 在站点根目录下 ：
 
 ```sh
-$ git init
-$ git submodule add https://github.com/oulh/hugo-webstack.git themes/hugo-webstack
+git init
+git submodule add https://github.com/oulh/hugo-webstack.git themes/hugo-webstack
 ```
 
 ### 自动构建
 
 方式3：**最方便**
 
-可以 Fork 这个初始模板： [github.com/oulh/nav](https://github.com/oulh/nav)，直接在线编辑+自动构建，无需本地环境。
+可以 导入 或 Fork 这个初始模板： [github.com/oulh/nav](https://github.com/oulh/nav)，直接在线编辑+自动构建，无需本地环境。
 
 自动构建平台可以选择 Github Pages、Cloudflare、Vercel、Netlify等。
 
@@ -97,7 +101,7 @@ copyright = "oulh"
 
 #### 导航网址logo图标
 
-1. 使用api自动获取，**留空或去掉**"logo" 配置项即自动在线加载logo图标。致谢 **[一为API](https://api.iowen.cn/)** 
+1. 使用api自动获取，**留空或去掉**"logo" 配置项即自动在线加载logo图标。api提供者：**[一为API](https://api.iowen.cn/)**, thanks!
 
 2. 使用本地静态文件，存放路径：`/static/images/logos/`；
 
@@ -133,9 +137,13 @@ data: #以下为导航链接内容
 
 #### **其他：**
 
-+ 分类标题前面的图标使用Font-Awesome-4.7.0，图标样式及名称参考：[图标库 - FontAwesome 字体图标中文Icon](https://fontawesome.com.cn/v4/icons)
++ 分类标题前面的图标参考：[FontAwesome-v6-free](https://origin.fontawesome.com/search) ，如果访问不了就试试这个：[FontAwesome中文网图标库v5](https://fontawesome.com.cn/v5)
 ```yaml
+<i class="fa-solid fa-star"></i>
 icon: fa-star
+
+<i class="fa-regular fa-star"></i>
+icon：fa-regular fa-star
 ```
 + 可以加公众号二维码，webstack.yml中的配置如下
 ```yaml

@@ -36,11 +36,11 @@
                 <header class="logo-env">
                     <!-- logo -->
                     <div class="logo">
-                        <a href="../index.html" class="logo-expanded" style="font-size:18px;color:#D3D3D3">
+                        <a href="../" class="logo-expanded" style="font-size:18px;color:#D3D3D3">
                             <img src="../images/logo-collapsed@2x.png" height="40" alt="" />
                             &nbsp&nbsp{{ if .Params.title }}{{ .Params.title }}{{ else }}{{ .Site.Title }}{{ end }}
                         </a>
-                        <a href="../index.html" class="logo-collapsed">
+                        <a href="../" class="logo-collapsed">
                             <img src="../images/logo-collapsed@2x.png" height="40" alt="">
                         </a>
                     </div>
@@ -234,7 +234,7 @@
                 </div>
                 <div class="footer-inner">
                     <div class="footer-text">
-                        Copyright © {{ now.Format "2006"}} <a href=""><strong>{{ if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}iplaycode{{ end }}</strong></a>&nbsp;&nbsp;Design by <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank"><strong>Webstack</strong></a>&nbsp;&nbsp;Power by <a href="https://github.com/gohugoio/hugo" target="_blank"><strong>Hugo</strong></a>&nbsp;&nbsp;Themes by <a href="https://github.com/oulh/hugo-webstack" target="_blank"><strong>hugo-webstack</strong></a>
+                        Copyright © {{ now.Format "2006"}} <a href=""><strong>{{ if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}author{{ end }}</strong></a>&nbsp;&middot;&nbsp;Design by <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank"><strong>Webstack</strong></a>&nbsp;&middot;&nbsp;Power by <a href="https://github.com/gohugoio/hugo" target="_blank"><strong>Hugo</strong></a>&nbsp;&middot;&nbsp;Themes by <a href="https://github.com/oulh/hugo-webstack" target="_blank"><strong>hugo-webstack</strong></a>
                     </div>
                 </div>
             </footer>

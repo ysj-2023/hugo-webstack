@@ -172,7 +172,7 @@ footer.main-footer .footer-text{float:left}
 nav.navbar{position:fixed;z-index:2000!important;width:calc(100% - 250px);padding:0;background-color:transparent}
 .sidebar-menu.collapsed+.main-content>nav.navbar{width:calc(100% - 80px)}
 .xe-widget.xe-conversations:hover,.xe-widget.xe-conversations:focus{background:#fff!important;text-decoration:none}
-.xe-card.qrcode a:after{content:'\f029';position:absolute;display:inline-block;font-family:FontAwesome;font-size:18px;color:#6d747a;margin-left:10px;bottom:0;right:5px}
+.xe-card.qrcode a:after{content:'\f029';position:absolute;display:inline-block;font-family:FontAwesome;font-size:18px;color:#aaa;margin-left:10px;bottom:0;right:5px}
 .mx-auto{margin-left:auto;margin-right:auto;float:none}
 .main-content .panel img{max-width:100%;height:auto}
 footer.main-footer{border-top:0;background-color:#fff}
@@ -293,8 +293,8 @@ input[type="button"],input[type="submit"]{background-color:#222;border:0;-webkit
 .search-type{overflow:scroll}
 .search-list{height:30px;overflow-y:hidden;overflow-x:scroll;white-space:nowrap}
 }
-/* --- 手机移动端 显示更密集一点 --- */
-@media screen and (max-width:767px){.xe-card{position:relative;height:80px;margin:10px 0 0 0;font-size:12px;}.box2{height:80px}.img-circle{padding:3px 0;}.xe-widget.xe-conversations{margin:0 5px}}
+/* --- 手机移动端 紧凑显示 --- */
+@media screen and (max-width:767px){.xe-card{position:relative;height:70px;margin:10px 0 0 0;font-size:12px;}.box2{height:70px}.img-circle{padding:0 0;}.xe-widget.xe-conversations{margin:0 5px}.xe-comment p{font-size:10px}}
 /* --- 高分辨率或浏览器缩放时显示更多列 --- */
 @media screen and (min-width:1600px){.col-md-3{width:20%}}
 @media screen and (min-width:2100px){.col-md-3{width:16.666%}}

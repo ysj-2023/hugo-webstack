@@ -27,7 +27,7 @@
                 <header class="logo-env">
                     <!-- logo -->
                     <div class="logo">
-                        <a href="/" class="logo-expanded" style="font-size:18px;color:#D3D3D3">
+                        <a href="/" class="logo-expanded" >
                             <img src="./images/logo-collapsed@2x.png" height="40" alt="" />
                             &nbsp&nbsp{{ .Site.Title }}
                         </a>
@@ -216,9 +216,12 @@
 {{ end }}
 </div>
             <footer class="main-footer sticky footer-type-1">
-                <div class="go-up">
+                <div class="foot-button">
                     <a href="#" rel="go-top">
                         <i class="fa fa-angle-up"></i>
+                    </a>
+                    <a href="javascript:" class="bright-dark" title="日/夜">
+                        <i class="fa {{ if .Site.Params.darkmode.enable }}fa-sun{{ else }}fa-moon{{ end }}"></i>
                     </a>
                 </div>
                 <div class="footer-inner">
@@ -231,6 +234,18 @@
     </div>
 <script type="text/javascript">
     $(document).ready(function() {
+        <!-- 黑暗和明亮模式 START -->
+        $('footer.main-footer .foot-button .bright-dark').click(function(){   
+            var currentIcon = $(this).find('i').attr('class'); 
+            if (currentIcon.includes('fa-moon')) {
+                $(this).find('i').removeClass('fa-moon').addClass('fa-sun');
+                $('body').removeClass('white').addClass('black');
+            }else if (currentIcon.includes('fa-sun')) { 
+                    $(this).find('i').removeClass('fa-sun').addClass('fa-moon');
+                    $('body').removeClass('black').addClass('white');
+            }        
+        });
+        <!-- 黑暗和明亮模式 END -->
         <!-- 利用iowen API 获取网址icon START --> 
         $(".geticon").each(function(){
             var url = $(this).find('a').attr('href');

@@ -1,20 +1,19 @@
 # Hugo版 WebStack 主题
 
 **预览**DEMO：[oulh.github.io/nav](https://oulh.github.io/nav)
-
 ![](https://raw.githubusercontent.com/oulh/hugo-webstack/master/static/images/smartmockups_lqc03197.jpg)
-
 本项目是基于**纯静态**的网址导航网站[webstack.cc](https://github.com/WebStackPage/WebStackPage.github.io) 制作的[Hugo](https://gohugo.io/)主题，在[iplaycode/webstack-hugo](https://github.com/iplaycode/webstack-hugo/tree/5e85297db430079c468dd33e78a945556973c73a/)的基础上完善和增加功能：
 
 1. 增加：api自动获取网站logo图片
 2. 增加：支持添加多个导航(子)页面
 3. 增加：卡片显示列数变化
    - 手机端显示双列
-   - 高分辨率大屏或网页缩放时显示5~6列
+   - 平板、PC、2/4k大屏自适应
    - 分类菜单收回或展开时，显示列数+1或-1
 4. 内容增加
    - 友情链接区域
    - 页面顶部天气
+   - 暗色和亮色模式切换
    - 在线编辑按钮(适用于 github + 自动化部署；可隐藏)
 5. 修改个别样式，增加一些可自定义配置项
 6. 分类标题前的图标库升级到 [FontAwesome-v6-free](https://origin.fontawesome.com/search)
@@ -59,7 +58,7 @@ git submodule add https://github.com/oulh/hugo-webstack.git themes/hugo-webstack
 
 ## 使用说明
 
-#### 网站配置项
+### 网站配置项 [hugo.toml](https://github.com/oulh/hugo-webstack/blob/master/exampleSite/hugo.toml)
 
 ```toml
 baseURL = "http://example.org/"
@@ -82,7 +81,7 @@ copyright = "oulh"
 [params.search]
   enable = true
 
-#是否开启暗色模式，true暗色模式，false亮色模式
+#设置默认模式，true暗色模式，false亮色模式
 [params.darkmode]
   enable = false
 
@@ -97,9 +96,99 @@ copyright = "oulh"
 [params.github]
   enable = true
   url = "https://github.com/oulh/nav"
+  
+  [permalinks]  
+  404 = "/404.html"
 ```
 
-#### 导航网址logo图标
+### 导航分类和网址配置 [webstack.tml](https://github.com/oulh/hugo-webstack/blob/master/exampleSite/data/webstack.yml)
+
+```yaml
+---
+- taxonomy: 常用工具
+  icon: fa-star
+  links: 
+    - title: 网络剪贴板
+      url: https://netcut.cn/
+      logo: images/logos/xxx.png
+      qrcode: https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://netcut.cn/
+      description: 在线跨屏剪切文字
+    - title: 草料二维码
+      qrcode: images/qrcodes/cli.png
+      url: https://cli.im/url
+      description: 在线二维码生成工具
+    - title: 在线文件传输
+      url: https://musetransfer.com/
+
+- taxonomy: 云服务平台
+  icon: fa-cloud
+  links: 
+    - title: Github
+      url: https://github.com/
+  
+- taxonomy: 网络资源
+  icon: fa-download
+  list: 
+    - term: 软件
+      links:
+        - title: 果核剥壳
+          url: https://www.ghxi.com/
+          description: 互联网的净土。PC软件，手机软件，正版软件，破解软件
+    - term: 游戏
+      links:
+        - title: 老男人游戏网
+          url: https://www.oldmantvg.net/
+          description: 仓储式主机资源站 精校 完整 极致 静待您的垂青
+          
+- taxonomy: 影视影音
+  icon: fa-video-camera
+  list: 
+    - term: 影视
+      links:
+        - title: 阿里小站
+          url: https://pan666.cn
+          description: 阿里云盘资源共享站。人人为我，我为人人的共享资源社区
+    - term: 字幕
+      links:
+        - title: 字幕库
+          url: https://zmk.pw/
+        - title: SubHD
+          url: https://subhd.tv/
+    - term: 音乐
+      links:
+        - title: 果核音乐搜搜
+          url: https://music.ghxi.com/
+        - title: 音乐磁场
+          url: https://www.hifini.com/
+
+- taxonomy: 友情链接
+  icon: fa-link
+  friend:
+    - title: 子页面一
+      url: sub1
+      description: 本站子页面一，对应content目录的sub1.md，可重命名、删除、复制。
+    - title: 一为导航
+      url: https://nav.iowen.cn/
+      description: onenav主题演示站
+    - title: 趣导航
+      url: https://qssily.com/
+      
+---
+```
+
+#### icon: 分类图标
+
+分类标题前面的图标参考：[FontAwesome-v6-free](https://origin.fontawesome.com/search) ，如果访问不了就试试这个：[FontAwesome中文网图标库v5](https://fontawesome.com.cn/v5)
+
+```yaml
+<i class="fa-solid fa-star"></i>
+icon: fa-star
+
+<i class="fa-regular fa-star"></i>
+icon：fa-regular fa-star
+```
+
+#### logo: 导航网址的图标
 
 1. 使用api自动获取，**留空或去掉**"logo" 配置项即自动在线加载logo图标。api提供者：**[一为API](https://api.iowen.cn/)**, thanks!
 
@@ -107,18 +196,30 @@ copyright = "oulh"
 
    配置写法：
 
-   - 主页面：logo: `images/logos/xxx.png`
-   - 子页面：logo: `../images/logos/xxx.png`
+   - 主页面：`logo: images/logos/xxx.png`
+   - 子页面：`logo: ../images/logos/xxx.png`
 
-   如果写错或图片不存在，则自动使用默认的 `images/favicon.png`（可替换）
+   如果图片不存在，则自动使用默认的logo图片：favicon.png（在images目录下，可替换）
 
-#### 添加自定义导航(子)页面
+#### qrcode：二维码
 
-在`content/` 目录下新建markdown文件，使用示例`sub1.md`配置 ，即可生成子页面。
+可以加二维码，webstack.yml中的配置如下
+
+```yaml
+    - title: 二维码演示
+      qrcode: ../images/qrcodes/cli.png
+      logo: 
+      url: https://cli.im/url
+      description: 二维码演示，手机扫一扫，也可以点击
+```
+
+### 添加自定义导航(子)页面
+
+在`content/` 目录下新建markdown文件，配置格式参考示例`sub1.md`。
 
 md文件名就是访问链接的子路径，如 [oulh.github.io/nav/sub1](https://oulh.github.io/nav/sub1)
 
-示例配置：
+示例配置：[sub1.md](https://github.com/oulh/hugo-webstack/blob/master/exampleSite/content/sub1.md)
 
 ```yaml
 ---
@@ -135,21 +236,3 @@ data: #以下为导航链接内容
 ---
 ```
 
-#### **其他：**
-
-+ 分类标题前面的图标参考：[FontAwesome-v6-free](https://origin.fontawesome.com/search) ，如果访问不了就试试这个：[FontAwesome中文网图标库v5](https://fontawesome.com.cn/v5)
-```yaml
-<i class="fa-solid fa-star"></i>
-icon: fa-star
-
-<i class="fa-regular fa-star"></i>
-icon：fa-regular fa-star
-```
-+ 可以加公众号二维码，webstack.yml中的配置如下
-```yaml
-    - title: 二维码演示
-      qrcode: ../images/qrcodes/cli.png
-      logo: 
-      url: https://cli.im/url
-      description: 二维码演示，手机扫一扫，也可以点击
-```

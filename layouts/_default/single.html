@@ -19,6 +19,8 @@
 <link rel='stylesheet' id='bootstrap-css'  href='../css/bootstrap.css?ver=3.4.1' type='text/css' media='all' />
 <link rel='stylesheet' id='nav-css'  href='../css/nav.css?ver=2.0.0' type='text/css' media='all' />
 <script type='text/javascript' src='../js/jquery-1.11.1.min.js'></script>
+<!-- 不蒜子访问量统计 -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 </head>
 <body class="page-body {{ if .Site.Params.darkmode.enable }}black{{ else }}white{{ end }}">
     <div class="page-container">
@@ -109,7 +111,13 @@
                 </div>
                 <div class="footer-inner">
                     <div class="footer-text">
-                        Copyright © {{ now.Format "2006"}} <a href=""><strong>{{ if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}author{{ end }}</strong></a>&nbsp;&middot;&nbsp;Design by <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank"><strong>Webstack</strong></a>&nbsp;&middot;&nbsp;Power by <a href="https://github.com/gohugoio/hugo" target="_blank"><strong>Hugo</strong></a>&nbsp;&middot;&nbsp;Themes by <a href="https://github.com/oulh/hugo-webstack" target="_blank"><strong>hugo-webstack</strong></a>
+                        Copyright © {{ now.Format "2006"}} <a href=""><strong>{{ if .Site.Copyright }}{{ .Site.Copyright | safeHTML }}{{ else }}author{{ end }}</strong>&nbsp;&nbsp;</a>              
+                    </div>
+                    <div class="footer-text">                       
+                        Design by <a href="https://github.com/WebStackPage/WebStackPage.github.io" target="_blank" style="color: rgb(13, 109, 252); font-weight: bold;">Webstack</a>&nbsp;&middot;&nbsp;Themes by <a href="https://github.com/oulh/hugo-webstack" target="_blank" style="color: rgb(13, 109, 252); font-weight: bold;">hugo-webstack</a>
+                    </div>
+                    <div class="footer-text">
+                        <span id="busuanzi_container_page_pv"  style="font-size:11px"> &nbsp;&nbsp; <i class="fa far fa-eye"></i> <span id="busuanzi_value_page_pv" style="color: rgb(13, 109, 252); font-weight: bold;"></span></span>                   
                     </div>
                 </div>
             </footer>

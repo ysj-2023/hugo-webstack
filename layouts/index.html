@@ -225,6 +225,9 @@
                     <a href="javascript:" class="bright-dark" title="日/夜">
                         <i class="fa {{ if .Site.Params.darkmode.enable }}fa-sun{{ else }}fa-moon{{ end }}"></i>
                     </a>
+                    <a href="javascript:" id="search-btn">
+                        <i class="fa fa-search"></i>
+                    </a>
                 </div>
                 <div class="footer-inner">
                     <div class="footer-text">
@@ -240,6 +243,16 @@
             </footer>
         </div>
     </div>
+    <div id="overlay" style="display:none">  
+    <div id="search-box" >
+        <form onsubmit="return false;">
+            <input type="text" id="search-input" placeholder="输入关键词" >
+            <i class="search-icon fa fa-search" aria-hidden="true"></i> 
+        </form>
+        <ul id="search-results"></ul>
+        <p style="font-size:11px;display:block">键盘：Ctrl+F 开关，<strong>↑</strong> 和 <strong>↓</strong> 选择，Enter 访问</p>
+    </div>
+    </div id="overlay"> 
 <script type="text/javascript">
     $(document).ready(function() {
         <!-- 黑暗和明亮模式 START -->
@@ -263,6 +276,7 @@
             }
         })
         <!-- END 利用iowen API 获取网址icon START-->
+        
         $(document).on('click', '.has-sub', function(){
             var _this = $(this)
             if(!$(this).hasClass('expanded')) {
@@ -343,6 +357,7 @@
         return false;
     });
 
+    /*点击分类跳转*/
     var href = "";
     var pos = 0;
     $("a.smooth").click(function(e) {
@@ -365,5 +380,6 @@
 <script type='text/javascript' src='./js/perfect-scrollbar.min.js?ver=0.5.8'></script>
 <script type='text/javascript' src='./js/nav.js?ver=2.0.0'></script>
 <script type='text/javascript' src='./js/lazyload.min.js?ver=2.0.0'></script>
+<script type='text/javascript' src='./js/local-search.js'></script>
 </body>
 </html>

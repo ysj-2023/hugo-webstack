@@ -6,17 +6,19 @@
 
 1. 增加：api自动获取网站logo图片
 2. 增加：支持添加多个导航(子)页面
-3. 增加：卡片显示列数变化
+3. 增加：本地搜索，支持拼音匹配（支持首字母）
+4. 增加：卡片显示列数变化
    - 手机端显示双列
    - 平板、PC、2/4k大屏自适应
    - 分类菜单收回或展开时，显示列数+1或-1
-4. 内容增加
+5. 内容增加
    - 友情链接区域
    - 页面顶部天气
    - 暗色和亮色模式切换
+   - 不蒜子访问量统计(页脚)
    - 在线编辑按钮(适用于 github + 自动化部署；可隐藏)
-5. 修改个别样式，增加一些可自定义配置项
-6. 分类标题前的图标库升级到 [FontAwesome-v6-free](https://origin.fontawesome.com/search)
+6. 修改个别样式，增加一些可自定义配置项
+7. 分类标题前的图标库升级到 [FontAwesome-v6-free](https://origin.fontawesome.com/search)
 
 ## 使用方式
 
@@ -99,6 +101,11 @@ copyright = "oulh"
   
   [permalinks]  
   404 = "/404.html"
+  
+#是否对本地搜索功能开启拼音匹配(支持首字母)，true开启，false禁止。
+#拼音检索速度慢一点点；拼音库体积337k，首次访问或清除浏览器缓存后，打开页面会慢一点点。
+[params.pinyin]
+  enable = true
 ```
 
 ### 导航分类和网址配置 [webstack.tml](https://github.com/oulh/hugo-webstack/blob/master/exampleSite/data/webstack.yml)

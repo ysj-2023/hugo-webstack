@@ -21,6 +21,7 @@
 <script type='text/javascript' src='./js/jquery-1.11.1.min.js'></script>
 <!-- 不蒜子访问量统计 -->
 <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+{{ if .Site.Params.pinyin.enable }}<script src="./js/pinyin-pro.js"></script>{{ end }}
 </head>
 <body class="page-body {{ if .Site.Params.darkmode.enable }}black{{ else }}white{{ end }}">
     <div class="page-container">
@@ -222,12 +223,12 @@
                     <a href="#" rel="go-top">
                         <i class="fa fa-angle-up"></i>
                     </a>
-                    <a href="javascript:" class="bright-dark" title="日/夜">
-                        <i class="fa {{ if .Site.Params.darkmode.enable }}fa-sun{{ else }}fa-moon{{ end }}"></i>
-                    </a>
                     <a href="javascript:" id="search-btn">
                         <i class="fa fa-search"></i>
                     </a>
+                    <a href="javascript:" class="bright-dark" title="日/夜">
+                        <i class="fa {{ if .Site.Params.darkmode.enable }}fa-sun{{ else }}fa-moon{{ end }}"></i>
+                    </a>                  
                 </div>
                 <div class="footer-inner">
                     <div class="footer-text">
@@ -245,12 +246,15 @@
     </div>
     <div id="overlay" style="display:none">  
     <div id="search-box" >
+        <a href="javascript:" id="close-button" title="点击周围任意地方也可以关闭。"><i class="fa far  fa-circle-xmark" ></i></a>
         <form onsubmit="return false;">
-            <input type="text" id="search-input" placeholder="输入关键词" >
+            <input type="text" id="search-input" placeholder="输入关键词{{ if .Site.Params.pinyin.enable }}、拼音或拼音首字母{{ end }}" autocomplete="off">
             <i class="search-icon fa fa-search" aria-hidden="true"></i> 
         </form>
-        <ul id="search-results"></ul>
-        <p style="font-size:11px;display:block">键盘：Ctrl+F 开关，<strong>↑</strong> 和 <strong>↓</strong> 选择，Enter 访问</p>
+        <ul id="search-results">
+            <span> 搜索本页内容</span>
+        </ul>
+        <p style="font-size:11px">键盘：Ctrl+F 开关，<strong>↑</strong> 和 <strong>↓</strong> 选择，Enter 访问</p>
     </div>
     </div id="overlay"> 
 <script type="text/javascript">
@@ -377,7 +381,6 @@
 </script>
 <script type='text/javascript' src='./js/bootstrap.min.js?ver=3.4.1'></script>
 <script type='text/javascript' src='./js/TweenMax.min.js?ver=1.13.1'></script>
-<script type='text/javascript' src='./js/perfect-scrollbar.min.js?ver=0.5.8'></script>
 <script type='text/javascript' src='./js/nav.js?ver=2.0.0'></script>
 <script type='text/javascript' src='./js/lazyload.min.js?ver=2.0.0'></script>
 <script type='text/javascript' src='./js/local-search.js'></script>

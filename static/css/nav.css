@@ -319,11 +319,15 @@ input[type="button"],input[type="submit"]{background-color:#222;border:0;-webkit
 #search-input{width:100%;padding-left:25px;border:none;outline:none;background:#f5f5f5}
 .black #search-input{background:#26282a;}
 #search-input:focus{border:none}
-#search-results{min-height:50px;max-height:150px;list-style-type:none;padding:0;margin-right:-10px;overflow:auto}
+#search-results{position:relative;min-height:50px;max-height:150px;list-style-type:none;padding:0;margin-right:-10px;overflow:auto}
+#search-results span{position:absolute;top:55%;left:48%;transform:translate(-50%,-50%);opacity:.5}
 @media (min-width:992px){#search-box{width:600px}#search-results{max-height:280px}#search-results::-webkit-scrollbar{width:8px!important;}#search-results::-webkit-scrollbar-thumb:vertical{border-radius:4px!important;}}
 @media (min-width:520px) and (max-width:768px){#search-box{width:350px}#search-results{max-height:150px}}
 @media (min-width:768px) and (max-width:992px){#search-box{width:450px}#search-results{max-height:200px}}
-#search-results li{font-size:15px;padding:4px;margin:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:600px}
+#search-results li{font-size:15px;padding:4px;margin:6px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:600px;}
+#search-results li a{padding-left:5px}
+#search-results li a strong {background-color:#eee;font-weight:400}
+.black #search-results li a strong {background-color:#888888bf}
 #search-results li:hover{background-color:#bdbdbd94;color:#ffffff}
 #search-results li i img{width:20px;height:20px}
 #search-results::-webkit-scrollbar{width:4px}
@@ -331,6 +335,8 @@ input[type="button"],input[type="submit"]{background-color:#222;border:0;-webkit
 #search-results::-webkit-scrollbar-thumb{background:#c1c1c1}
 .black #search-results::-webkit-scrollbar-thumb{background:#ddd}
 #search-results .highlight{background-color:#bdbdbd94;color:#ffffff}
+#close-button{position:absolute;bottom:-25px;left:48%;}
+#close-button i{opacity:0.3;}
 /*本地搜索框 END*/
 /*暗色模式*/
 .black{background-color:#26282a}

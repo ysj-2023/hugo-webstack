@@ -37,7 +37,7 @@ copyright = "oulh"
 [permalinks]  
   404 = "/404.html"
 
-#是否对本地搜索功能开启拼音匹配(支持首字母)，true开启，false禁止。
-#拼音检索速度慢一点点；拼音库体积337k，首次访问或清除浏览器缓存后，打开页面会慢一点点。
+#是否对本地搜索功能开启拼音匹配，true开启，false禁止。
+#拼音库体积337k，支持首字母匹配
 [params.pinyin]
   enable = true

@@ -65,17 +65,17 @@ function search() {
                 results.push({
                     href: cardLink.href,
                     text: clipContent,
-                    img: imgSrc,
+                    dataSrc: imgSrc,
                     pyMatch: pinyinMatch,
                     wdMatch: wordMatch
-                    
                 });  
             }  
         }  
     }  
     
     resultsList.innerHTML = '';  // 清空结果列表
-    if (results.length > 0) {  
+    if (results.length > 0) {
+        var defaultLogo = rootPath+'images/favicon.png';
         for (var j = 0; j < results.length; j++) {
         // 用高亮的标签替换匹配到的汉字
             if (results[j].wdMatch){
@@ -89,10 +89,11 @@ function search() {
             var listItem = document.createElement('li');  
             // 加一个i标签用于显示logo
             var newIcon = document.createElement('i');
-            var img = document.createElement('img');  
-            img.src = results[j].img;           
+            var img = document.createElement('img');
             img.classList.add('lazy');
-            img.setAttribute('onerror', "javascript:this.src='/images/favicon.png'");
+            img.src = defaultLogo;
+            img.setAttribute('data-src',results[j].dataSrc)
+            img.setAttribute('onerror', `javascript:this.src='${defaultLogo}'`);
             newIcon.appendChild(img);
             // 添加a标签
             var newLink = document.createElement('a');  
@@ -103,7 +104,8 @@ function search() {
             listItem.appendChild(newIcon);
             listItem.appendChild(newLink);  
             resultsList.appendChild(listItem);  
-        }  
+        }
+        $("img.lazy").lazyload();
     } else {  
         resultsList.innerHTML = '<span>没有找到匹配的内容。</span>';        
     }

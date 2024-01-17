@@ -108,7 +108,9 @@ copyright = "oulh"
   enable = true
 ```
 
-### 导航分类和网址配置 [webstack.tml](https://github.com/oulh/hugo-webstack/blob/master/exampleSite/data/webstack.yml)
+### 导航分类和网址配置 [webstack.yml](https://github.com/oulh/hugo-webstack/blob/master/exampleSite/data/webstack.yml)
+
+可以复制下面的配置，以便于修改编辑自己的内容。title和url是必要属性，logo、description、qrcode可留空或删除。
 
 ```yaml
 ---
@@ -214,7 +216,7 @@ icon：fa-regular fa-star
 
 ```yaml
     - title: 二维码演示
-      qrcode: ../images/qrcodes/cli.png
+      qrcode: images/qrcodes/cli.png
       logo: 
       url: https://cli.im/url
       description: 二维码演示，手机扫一扫，也可以点击
